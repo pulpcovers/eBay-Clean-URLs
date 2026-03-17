@@ -1,0 +1,27 @@
+// ==UserScript==
+// @name         eBay Clean URLs
+// @namespace    https://tampermonkey.net/
+// @version      1.0
+// @description  Remove tracking parameters from eBay item URLs
+// @match        https://www.ebay.com/itm/*
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    const cleanUrl = () => {
+        const url = window.location.href;
+
+        // If there's no "?", nothing to clean
+        if (!url.includes('?')) return;
+
+        // Keep only the part before the "?"
+        const base = url.split('?')[0];
+
+        // Replace the URL in the address bar without reloading
+        window.history.replaceState({}, "", base);
+    };
+
+    cleanUrl();
+})();
