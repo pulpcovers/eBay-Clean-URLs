@@ -3,6 +3,9 @@
 // @namespace    https://tampermonkey.net/
 // @version      1.0
 // @description  Remove tracking parameters from eBay item URLs
+// @author       PulpCovers.com
+// @updateURL    https://github.com/pulpcovers/eBay-Clean-URLs/raw/refs/heads/main/clean-urls-ebay
+// @downloadURL  https://github.com/pulpcovers/eBay-Clean-URLs/raw/refs/heads/main/clean-urls-ebay
 // @match        https://www.ebay.com/itm/*
 // @run-at       document-start
 // ==/UserScript==
